@@ -10,7 +10,7 @@ class Vehicle:
         self.owner = owner_name
         self.__model = model
         self.__engine_power = power
-        self.set_color(color)
+        self.__color = color
     def get_model(self):
         return f"Модель: {self.__model}."
     def get_horsepower(self):
