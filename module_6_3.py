@@ -3,7 +3,7 @@ class Horse:
     """пройденный путь"""
     x_distance = 0
     """ звук, который издаёт лошадь"""
-    sound = 'Frrr'
+    _sound = 'Frrr'
     def run(self, dx):
         self.x_distance += dx
 class Eagle:
@@ -12,7 +12,7 @@ class Eagle:
     sound = 'I train, eat, sleep, and repeat'
     def fly(self, dy):
         self.y_distance += dy
-class Pegasus( Eagle, Horse):
+class Pegasus( Horse,  Eagle):
 
     def move(self, dx, dy):
         super().run( dx)
