@@ -1,12 +1,8 @@
 class Vehicle:
-    owner : str # владелец транспорта
-    __model : str #модель (марка) транспорта
-    __engine_power : int # мощность двигателя
-    __color : int
 
     __COLOR_VARIANTS = ['magenta', 'black', 'white', 'khaki']
 
-    def __init__(self, owner_name, model, color, power):
+    def __init__(self, owner_name: str, model: str, color: str, power: int):
         self.owner = owner_name
         self.__model = model
         self.__engine_power = power
@@ -23,10 +19,6 @@ class Vehicle:
         print(self.get_horsepower())
         print(self.get_color())
         print("Владелец: ", self.owner)
-
-    def new_color(self, new_color):
-        if new_color.lower() in self.__COLOR_VARIANTS:
-            self.__color = new_color
 
     def set_color(self, new_color):
         if new_color.lower() in self.__COLOR_VARIANTS:
